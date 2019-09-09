@@ -21,9 +21,11 @@
 .show {
     opacity: 1 !important;
 }
-
 .hide {
     opacity: 0;
+}
+.hideenemy {
+    opacity: 0 !important;
 }
 
 .attackbut{
@@ -38,4 +40,9 @@ body {
 
 .youSelected {
     border: green solid 5px;
+
+}
+
+.enemySelected {
+    border: red solid 5px;
 }
