@@ -39,19 +39,20 @@ $(document).ready(function () {
 
 
 //Adds class to selected legend
+function apexLegends (){
     $(".legend").click(function (e) {
         if ($(this).hasClass("legend")) {
             currentLegend = $(this).val();
             $(this).addClass("youSelected");
-            //   $(".youSelected").add("div");
+
         }
-
-
-//Adds class to legends not selected
         if ($('.legend')) {
             $('.legend:not(.youSelected').addClass("hide")
         }
 
+        if ($(".youSelected")){
+            $("#battleground").append( $('.youSelected') );
+        }
         $('.enemies').addClass("show")
         console.log(currentLegend)
     })
@@ -66,12 +67,17 @@ $(document).ready(function () {
         if ($('.enemies')) {
             $('.enemies:not(.enemySelected').addClass("hideenemy")
         }
+
+        if ($(".enemySelected")){
+            $("#battleground").append( $('.enemySelected') );
+        }
         $('.attackbut').addClass("show")
         console.log(currentEnemy)
     })
 
+}
 //Start Fight
-
+apexLegends();
 
 
 

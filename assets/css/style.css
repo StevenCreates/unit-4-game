@@ -8,6 +8,7 @@
   
 .title {
     text-align: center;
+    margin-top: 2%;
 }
 
 .centerel {
@@ -20,6 +21,7 @@
 
 .show {
     opacity: 1 !important;
+    display: block !important;
 }
 .hide {
     opacity: 0;
@@ -30,6 +32,7 @@
 
 .attackbut{
     opacity: 0;
+    display: none;
 }
 
 body {
@@ -45,4 +48,17 @@ body {
 
 .enemySelected {
     border: red solid 5px;
+}
+
+.ready {
+    float: left;
+    position: sticky;
+
+}
+
+.gamebuttons {
+    color: black;
+    /* align-content: center;
+    margin: 3%;
+    display: inline-block; */
 }
