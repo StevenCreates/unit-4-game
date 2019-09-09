@@ -12,14 +12,16 @@
 
 <body>
     <!-- Header/Title -->
-    <div class="title"><h1>Kings Canyon Awaits Your Legend Selection</h1></div>
+    <div class="title">
+        <h1>Kings Canyon Awaits Your Legend Selection</h1>
+    </div>
     <!-- Container for all of the content -->
     <div class="container title">
         <!-- Legend Selection -->
         <div class="row">
             <div class="col-md-3">
-                <div class="card legend" value="pathfinder" style="width: 18rem;">
-                    <img src="assets/images/pathfinder.png" class="card-img-top" alt="...">
+                <div class="card legend" id="pathfinder" style="width: 18rem;">
+                    <img src="assets/images/pathfinder.png" class="card-img-top" alt="pathfinder">
                     <div class="card-body">
                         <p class="card-text">Pathfinder: 200</p>
                     </div>
@@ -27,7 +29,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card legend" value="wraith" style="width: 18rem;">
-                    <img src="assets/images/wraith.png" class="card-img-top" alt="...">
+                    <img src="assets/images/wraith.png" class="card-img-top" alt="wraith">
                     <div class="card-body">
                         <p class="card-text">Wraith: 150</p>
                     </div>
@@ -35,7 +37,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card legend" value="octane" style="width: 18rem;">
-                    <img src="assets/images/octaine.png" class="card-img-top" alt="...">
+                    <img src="assets/images/octaine.png" class="card-img-top" alt="octane">
                     <div class="card-body">
                         <p class="card-text">Octane: 100</p>
                     </div>
@@ -43,46 +45,47 @@
             </div>
             <div class="col-md-3">
                 <div class="card legend" value="wattson" style="width: 18rem;">
-                    <img src="assets/images/wattson.png" class="card-img-top" alt="...">
+                    <img src="assets/images/wattson.png" class="card-img-top" alt="wattson">
                     <div class="card-body">
                         <p class="card-text">Wattson: 175</p>
                     </div>
                 </div>
             </div>
         </div>
-<!-- Enemies Header -->
+        <!-- Enemies Header -->
 
 
-<!-- Enemies -->
-<div class="enemies">
-    <h3>Choose your opponent!</h3>
-</div>
-<div class="row title centerel">
-        <div class="col-md-4">
-                <div class="card enemies" style="width: 18rem;">
-                    <img src="assets/images/gibraltar.png" class="card-img-top" alt="...">
+        <!-- Enemies -->
+        <div class="enemies">
+            <h3>Choose your opponent!</h3>
+            <button type="button" class="btn btn-danger attackbut" id="attack">Attack!</button>
+        </div>
+        <div class="row title centerel">
+            <div class="col-md-4">
+                <div class="card enemies fighter" style="width: 18rem;" value="gibraltar">
+                    <img src="assets/images/gibraltar.png" class="card-img-top" alt="gibraltar">
                     <div class="card-body">
                         <p class="card-text">Gibraltar: 300</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card enemies" style="width: 18rem;">
-                    <img src="assets/images/lifeline.png" class="card-img-top" alt="...">
+                <div class="card enemies fighter" style="width: 18rem;">
+                    <img src="assets/images/lifeline.png" class="card-img-top" alt="lifeline">
                     <div class="card-body">
                         <p class="card-text">Lifeline: 210</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card enemies" style="width: 18rem;">
-                    <img src="assets/images/caustic.png" class="card-img-top" alt="...">
+                <div class="card enemies fighter" style="width: 18rem;">
+                    <img src="assets/images/caustic.png" class="card-img-top" alt="caustic">
                     <div class="card-body">
                         <p class="card-text">Caustic: 225</p>
                     </div>
                 </div>
             </div>
-</div>
+        </div>
 
 
 
@@ -92,17 +95,15 @@
 
     </div>
 
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>

@@ -5,12 +5,38 @@ var attack = [];
 var selection = null;
 var currentHp = [];
 var currentLegend = null;
+var currentEnemy = null;
 
 //establish characters stats
 
-wraith = [
-    hp = "150"
-]
+var pathfinder = {
+        id: 0,
+        name: "pathfinder",
+        hp: 200,
+        attack: 18,
+    }
+
+var  wraith = {
+        id: 1,
+        name: "wraith",
+        hp: 150,
+        attack: 15,
+    }
+
+var octane = {
+        id: 2,
+        name: "octane",
+        hp: 100,
+        attack: 22,
+    }
+
+var  wattson = {
+        id: 3,
+        name: "wattson",
+        hp: 175,
+        attack: 20,
+    }
+    
 
 //Unhides enemies when legend is selected.
 $(".legend").click(function (e) {
@@ -21,15 +47,22 @@ $(".legend").click(function (e) {
     console.log(currentLegend)
 })
 
-// $('.enemies').addClass("show");
+//when enemie gets selected functionality 
+$(".fighter").click(function (e) {
+    if ($(this).hasClass("enemies")) {
+        currentEnemy = $(this).val();
+    }
+    $('.attackbut').addClass("show")
+    console.log(currentEnemy)
+})
 
-
-
-// code that adds class to hides other enemies
 
 // attack button that when clicked will do .random to determine what damage was done
 
-// currentLegend = $(this).val();
 
+
+
+
+//end doc ready function
 })
 
