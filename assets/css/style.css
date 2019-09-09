@@ -35,3 +35,7 @@ body {
     background-size: cover;
     color: lightcoral;
 }
+
+.youSelected {
+    border: green solid 5px;
+}

@@ -42,7 +42,16 @@ var  wattson = {
 $(".legend").click(function (e) {
     if ($(this).hasClass("legend")) {
         currentLegend = $(this).val();
+        $(this).addClass("youSelected")
     }
+
+    if ($('.legend')) {
+        $('.legend:not(.youSelected').addClass("hide")
+    }
+
+
+
+
     $('.enemies').addClass("show")
     console.log(currentLegend)
 })
