@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
-    // variables 
+// variables 
     var attack = [];
     var selection = null;
     var currentHp = [];
     var currentLegend = null;
     var currentEnemy = null;
 
-    //establish characters stats
+//establish characters stats
 
     var pathfinder = {
         id: 0,
@@ -38,14 +38,16 @@ $(document).ready(function () {
     }
 
 
-    //Adds class to selected legend
+//Adds class to selected legend
     $(".legend").click(function (e) {
         if ($(this).hasClass("legend")) {
             currentLegend = $(this).val();
             $(this).addClass("youSelected");
             //   $(".youSelected").add("div");
         }
-        //Adds class to legends not selected
+
+
+//Adds class to legends not selected
         if ($('.legend')) {
             $('.legend:not(.youSelected').addClass("hide")
         }
@@ -54,7 +56,8 @@ $(document).ready(function () {
         console.log(currentLegend)
     })
 
-    //Grabs value of current legend
+
+//Grabs value of current legend
     $(".fighter").click(function (e) {
         if ($(this).hasClass("enemies")) {
             currentEnemy = $(this).val();
@@ -67,8 +70,10 @@ $(document).ready(function () {
         console.log(currentEnemy)
     })
 
+//Start Fight
 
-    // attack button that when clicked will do .random to determine what damage was done
+
+
 
 
 
