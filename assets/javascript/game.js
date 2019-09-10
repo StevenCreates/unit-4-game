@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
-// variables 
+    // variables 
     var attack = [];
     var selection = null;
     var currentHp = [];
     var currentLegend = null;
     var currentEnemy = null;
 
-//establish characters stats
+    //establish characters stats
 
     var pathfinder = {
         id: 0,
@@ -38,53 +38,56 @@ $(document).ready(function () {
     }
 
 
-//Adds class to selected legend
-function apexLegends (){
-    $(".legend").click(function (e) {
-        if ($(this).hasClass("legend")) {
-            currentLegend = $(this).val();
-            $(this).addClass("youSelected");
+    //Adds class to selected legend
+    function apexLegends() {
+        $(".legend").click(function (e) {
+            if ($(this).hasClass("legend")) {
+                currentLegend = $(this).val();
+                $(this).addClass("youSelected");
+            }
+            if ($('.legend')) {
+                $('.legend:not(.youSelected').addClass("hide");
+            }
 
-        }
-        if ($('.legend')) {
-            $('.legend:not(.youSelected').addClass("hide")
-        }
-
-        if ($(".youSelected")){
-            $("#battleground").append( $('.youSelected') );
-        }
-        $('.enemies').addClass("show")
-        console.log(currentLegend)
-    })
-
-
-//Grabs value of current legend
-    $(".fighter").click(function (e) {
-        if ($(this).hasClass("enemies")) {
-            currentEnemy = $(this).val();
-            $(this).addClass("enemySelected")
-        }
-        if ($('.enemies')) {
-            $('.enemies:not(.enemySelected').addClass("hideenemy")
-        }
-
-        if ($(".enemySelected")){
-            $("#battleground").append( $('.enemySelected') );
-        }
-        $('.attackbut').addClass("show")
-        console.log(currentEnemy)
-    })
-
-}
-//Start Fight
-apexLegends();
+            if ($(".youSelected")) {
+                $("#battleground").append($('.youSelected'));
+            }
+            $('.enemies').addClass("show");
+            console.log(currentLegend);
+        })
 
 
+        //Grabs value of current legend
+        $(".fighter").click(function (e) {
+            if ($(this).hasClass("enemies")) {
+                currentEnemy = $(this).val();
+                $(this).addClass("enemySelected")
+            }
+            if ($('.enemies')) {
+                $('.enemies:not(.enemySelected').addClass("hideenemy");
+            }
 
+            if ($(".enemySelected")) {
+                $("#battleground").append($('.enemySelected'));
+            }
+            $('.attackbut').addClass("show");
+            console.log(currentEnemy);
+        })
 
+    }
+    //Start Fight
+    apexLegends();
+
+    //Capture attack click
+    function attak() {
+        $(".attackyou").click(function (e) {
+            console.log("woot");
+        })
+    }
+
+    attak();
 
 
 
     //end doc ready function
 })
-
