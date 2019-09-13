@@ -3,15 +3,11 @@ $(document).ready(function () {
     // variables 
     var attackerAP = [];
     var defenderAP = [];
-    var selection = null;
     var currentLegend;
     var currentEnemy;
     var attackerHP;
     var defenderHP;
-    var legattack;
-    var defattack;
-    var name;
-    var myChar = "";
+
 
 
     //establish characters stats
@@ -161,12 +157,24 @@ $(document).ready(function () {
     }
     //Start Fight
 
-    //Capture attack click
+    //attack click
     function attak() {
         $(".attackyou").click(function (e) {
         defenderHP = parseInt(defenderHP) - parseInt(attackerAP);
         console.log(defenderHP);
         $(".defenderhealth").text(defenderHP);
+
+        attackerHP = parseInt(attackerHP) - parseInt(defenderAP);
+        console.log(attackerHP);
+        $(".playerhealth").text(attackerHP);
+
+
+        if (attackerHP <= 0){
+            alert("you lose");
+        }
+        else if (defenderHP <= 0){
+            alert("you win");
+        }
         })
     }
 
