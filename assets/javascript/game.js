@@ -1,48 +1,81 @@
 $(document).ready(function () {
 
     // variables 
-    var attack = [];
+    var attackerAP = [];
+    var defenderAP = [];
     var selection = null;
-    var currentHp = [];
-    var currentLegend = null;
-    var currentEnemy = null;
+    var currentLegend;
+    var currentEnemy;
+    var attackerHP;
+    var defenderHP;
+    var legattack;
+    var defattack;
+    var name;
+    var myChar = "";
+
 
     //establish characters stats
+    var legends = {
+        Pathfinder: {
+            id: 0,
+            name: "Pathfinder",
+            hp: 200,
+            attack: 18,
+        },
 
-    var pathfinder = {
-        id: 0,
-        name: "pathfinder",
-        hp: 200,
-        attack: 18,
+        Wraith: {
+            id: 1,
+            name: "Wraith",
+            hp: 150,
+            attack: 15,
+        },
+
+        Octane: {
+            id: 2,
+            name: "Octane",
+            hp: 100,
+            attack: 22,
+        },
+
+        Wattson: {
+            id: 3,
+            name: "Wattson",
+            hp: 175,
+            attack: 20,
+        }
     }
 
-    var wraith = {
-        id: 1,
-        name: "wraith",
-        hp: 150,
-        attack: 15,
+    var enemies = {
+        Gibraltar: {
+            id: 4,
+            name: "Gibraltar",
+            hp: 300,
+            attack: 10,
+        },
+
+        Lifeline: {
+            id: 5,
+            name: "Lifeline",
+            hp: 210,
+            attack: 15,
+        },
+
+        Caustic: {
+            id: 6,
+            name: "Caustic",
+            hp: 100,
+            attack: 22,
+        },
     }
 
-    var octane = {
-        id: 2,
-        name: "octane",
-        hp: 100,
-        attack: 22,
-    }
-
-    var wattson = {
-        id: 3,
-        name: "wattson",
-        hp: 175,
-        attack: 20,
-    }
 
 
-    //Adds class to selected legend
+
+    //Adds everything to selected legend
     function apexLegends() {
         $(".legend").click(function (e) {
             if ($(this).hasClass("legend")) {
-                currentLegend = $(this).val();
+                currentLegend = $(this).data("value");
                 $(this).addClass("youSelected");
             }
             if ($('.legend')) {
@@ -54,39 +87,97 @@ $(document).ready(function () {
             }
             $('.enemies').addClass("show");
             console.log(currentLegend);
+
+            if (currentLegend == legends.Pathfinder.name) {
+                attackerHP = legends.Pathfinder.hp;
+                attackerAP = legends.Pathfinder.attack;
+                legattack = legends.Pathfinder;
+                console.log(attackerHP);
+                console.log(attackerAP);
+            }
+            else if (currentLegend == legends.Wraith.name) {
+                attackerHP = legends.Wraith.hp;
+                attackerAP = legends.Wraith.attack;
+                legattack = legends.Wraith;
+                console.log(attackerHP);
+                console.log(attack);
+            }
+            else if (currentLegend == legends.Octane.name) {
+                attackerHP = legends.Octane.hp;
+                attackerAP = legends.Octane.attack;
+                legattack = legends.Octane;
+                console.log(attackerHP);
+                console.log(attack);
+            }
+            else if (currentLegend == legends.Wattson.name) {
+                attackerHP = legends.Wattson.hp;
+                attackerAP = legends.Wattson.attack;
+                legattack = legends.Wattson;
+                console.log(attackerHP);
+                console.log(attack);
+                console.log(attackerAP);
+            }
         })
 
 
-        //Grabs value of current legend
+        //Grabs value of current enemy
         $(".fighter").click(function (e) {
             if ($(this).hasClass("enemies")) {
-                currentEnemy = $(this).val();
+                currentEnemy = $(this).data("value");
                 $(this).addClass("enemySelected")
             }
             if ($('.enemies')) {
                 $('.enemies:not(.enemySelected').addClass("hideenemy");
             }
-
             if ($(".enemySelected")) {
                 $("#battleground").append($('.enemySelected'));
             }
             $('.attackbut').addClass("show");
-            console.log(currentEnemy);
+            
+            if (currentEnemy == enemies.Gibraltar.name) {
+                defenderHP = enemies.Gibraltar.hp;
+                defenderAP = enemies.Gibraltar.attack;
+                objattack = enemies.Gibraltar;
+                console.log(defenderHP);
+                console.log(defenderAP);
+            }
+            else if (currentEnemy == enemies.Lifeline.name) {
+                defenderHP = enemies.Lifeline.hp;
+                defenderAP = enemies.Lifeline.attack;
+                objattack = enemies.Lifeline;
+                console.log(defenderHP);
+                console.log(defenderAP);
+            }
+            else if (currentEnemy == enemies.Caustic.name) {
+                defenderHP = enemies.Caustic.hp;
+                defenderAP = enemies.Caustic.attack;
+                objattack = enemies.Caustic;
+                console.log(defenderHP);
+                console.log(defenderAP);
+            }
+            
         })
 
     }
     //Start Fight
-    apexLegends();
 
     //Capture attack click
     function attak() {
         $(".attackyou").click(function (e) {
-            console.log("woot");
+        defenderHP - attackerAP
         })
     }
 
-    attak();
 
+
+
+
+
+
+
+
+    attak();
+    apexLegends();
 
 
     //end doc ready function
