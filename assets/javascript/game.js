@@ -164,7 +164,9 @@ $(document).ready(function () {
     //Capture attack click
     function attak() {
         $(".attackyou").click(function (e) {
-        defenderHP - attackerAP
+        defenderHP = parseInt(defenderHP) - parseInt(attackerAP);
+        console.log(defenderHP);
+        $(".defenderhealth").text(defenderHP);
         })
     }
 
